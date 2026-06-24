@@ -22,7 +22,7 @@ class _HomeScreenState extends State<HomeScreen> {
         color: Colors.grey[200],
         padding: EdgeInsets.symmetric(vertical: 8, horizontal: 4),
         child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly, // ✅ spread evenly
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             _buildIconButton(Icons.not_interested_rounded, Colors.grey),
             _buildTextButton("+", Colors.black),
@@ -43,7 +43,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget _buildTextButton(String symbol, Color color) {
     return OutlinedButton(
       style: OutlinedButton.styleFrom(
-        minimumSize: Size(60, 60),
+        minimumSize: Size(85, 65),
         side: BorderSide(color: Colors.grey, width: 2),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
       ),
@@ -63,7 +63,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget _buildIconButton(IconData icon, Color color) {
     return OutlinedButton(
       style: OutlinedButton.styleFrom(
-        minimumSize: Size(60, 60),
+        minimumSize: Size(85, 65),
         side: BorderSide(color: Colors.grey, width: 2),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
       ),
